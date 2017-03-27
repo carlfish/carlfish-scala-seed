@@ -1,6 +1,19 @@
 A [Giter8][g8] template to save time when I want to just throw together some
 random scala code.
 
+libs:
+
+* cats
+* cats eff
+* scalatest
+* http4s
+* scala-logging + logback
+
+plugins:
+
+* scalariform
+* kind projector
+
 Template license
 ----------------
 Written in 2017 by Charles Miller <cmiller@pastiche.org>
