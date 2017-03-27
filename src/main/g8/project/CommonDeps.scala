@@ -2,13 +2,13 @@ import sbt._
 
 object CommonDeps {
   object v {
-    val cats = "$catsversion$"
-    val http4s = "$http4sversion$"
-    val circe = "$circeversion$"
-    val scalatest = "$scalatestversion$"
-    val scalacheck = "$scalacheckversion$"
-    val scalalogging = "$scalaloggingversion$"
-    val logback = "$logbackversion$"
+    val cats = "0.9.0"
+    val http4s = "0.15.7a"
+    val circe = "0.7.0"
+    val scalatest = "3.0.1"
+    val scalacheck = "1.13.4"
+    val scalalogging = "3.5.0"
+    val logback = "1.1.7"
   }
 
   val cats = Seq (
