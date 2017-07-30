@@ -3,7 +3,7 @@ import Keys.{console => sbtConsole, _}
 
 object CommonSettings {
   lazy val compiler = Seq(
-    scalaVersion := "2.12.1",
+    scalaVersion := "2.12.2",
 
     // Set of "good" compile options from https://tpolecat.github.io/2014/04/11/scalac-flags.html
     scalacOptions ++= Seq(
