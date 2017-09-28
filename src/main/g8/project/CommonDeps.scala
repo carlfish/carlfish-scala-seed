@@ -13,13 +13,7 @@ object CommonDeps {
   }
 
   val cats = Seq (
-    "org.typelevel" %% "cats" % v.cats,
-    "org.typelevel" %% "cats-free" % v.cats,
-    "org.typelevel" %% "cats-mtl" % v.cats
-  )
-
-  val fs2 = Seq (
-
+    "org.typelevel" %% "cats" % v.cats
   )
 
   val http4s_common = Seq(
