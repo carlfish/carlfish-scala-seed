@@ -3,16 +3,23 @@ import sbt._
 object CommonDeps {
   object v {
     val cats = "0.9.0"
-    val http4s = "0.15.16a"
     val circe = "0.8.0"
-    val scalatest = "3.0.1"
+    val fs2 = "0.9.7"
+    val http4s = "0.17.2"
+    val logback = "1.2.3"
     val scalacheck = "1.13.4"
     val scalalogging = "3.7.2"
-    val logback = "1.2.3"
+    val scalatest = "3.0.1"
   }
 
   val cats = Seq (
-    "org.typelevel" %% "cats" % v.cats
+    "org.typelevel" %% "cats" % v.cats,
+    "org.typelevel" %% "cats-free" % v.cats,
+    "org.typelevel" %% "cats-mtl" % v.cats
+  )
+
+  val fs2 = Seq (
+
   )
 
   val http4s_common = Seq(
