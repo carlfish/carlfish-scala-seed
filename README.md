@@ -1,18 +1,24 @@
 A [Giter8][g8] template to save time when I want to just throw together some
-random scala code.
+random scala code. Based entirely on whatever happens to be my preferred style
+of Scala coding today.
 
 libs:
 
 * cats
-* cats eff
 * scalatest
 * http4s
 * scala-logging + logback
+* doobie
 
 plugins:
 
 * scalariform
 * kind projector
+
+notes:
+
+Currently defaults to 'fork=true' because I the random classloader leaks in different libraries causing me
+to run out of metaspace while coding got more annoying than the increase in build time.
 
 Template license
 ----------------
