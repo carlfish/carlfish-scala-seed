@@ -4,6 +4,10 @@ import Keys.{console => sbtConsole, _}
 object CommonSettings {
   lazy val compiler = Seq(
     scalaVersion := "2.12.4",
+<<<<<<< HEAD
+=======
+    fork := true,
+>>>>>>> 97dd56ac801a9cdff2832fb3d8229dec25ecb424
 
     // Set of "good" compile options from https://tpolecat.github.io/2014/04/11/scalac-flags.html
     scalacOptions ++= Seq(
@@ -26,7 +30,11 @@ object CommonSettings {
       "-Yno-predef"
     ),
 
+<<<<<<< HEAD
     scalacOptions in (Compile, sbtConsole) ~= (_ filterNot (a => a == "-Ywarn-unused-import" || a == "-Xlint")),
+=======
+    scalacOptions in (Compile, sbtConsole) ~= (_ filterNot (_ == "-Ywarn-unused-import" || a == "-Xlint")),
+>>>>>>> 97dd56ac801a9cdff2832fb3d8229dec25ecb424
     scalacOptions in (Test, sbtConsole) := (scalacOptions in (Compile, sbtConsole)).value,
 
     resolvers += Resolver.sonatypeRepo("releases"),
@@ -41,5 +49,12 @@ object CommonSettings {
       import cats.data._
       import cats.implicits._
       |""".stripMargin
+  )
+
+  import scalariform.formatter.preferences._
+  lazy val scalariform = Seq(
+    scalariformPreferences := scalariformPreferences.value
+      .setPreference(DanglingCloseParenthesis, Force)
+      .setPreference(RewriteArrowSymbols, true)
   )
 }

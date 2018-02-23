@@ -4,8 +4,10 @@ object CommonDeps {
   object v {
     val cats = "1.0.1"
     val catsmtl = "0.2.1"
+    val doobie = "0.4.4"
     val circe = "0.9.1"
     val fs2 = "0.10.1"
+    val h2 = "1.4.195"
     val http4s = "0.18.0"
     val logback = "1.2.3"
     val scalacheck = "1.13.4"
@@ -35,7 +37,13 @@ object CommonDeps {
   val circe = Seq(
     "io.circe" %% "circe-core"    % v.circe,
     "io.circe" %% "circe-generic" % v.circe,
-    "io.circe" %% "circe-parser"  % v.circe)
+    "io.circe" %% "circe-parser"  % v.circe,
+    "io.circe" %% "circe-literal" % v.circe % "test")
+
+  val doobie = Seq(
+    "org.tpolecat" %% "doobie-core-cats" % v.doobie,
+    "com.h2database" % "h2" % v.h2 % "test"
+  )
 
   val scalatest = Seq(
     "org.scalatest" %% "scalatest"   % v.scalatest % "test",
