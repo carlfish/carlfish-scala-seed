@@ -3,7 +3,7 @@ import Keys.{console => sbtConsole, _}
 
 object CommonSettings {
   lazy val compiler = Seq(
-    scalaVersion := "2.12.2",
+    scalaVersion := "2.12.4",
 
     // Set of "good" compile options from https://tpolecat.github.io/2014/04/11/scalac-flags.html
     scalacOptions ++= Seq(
@@ -26,7 +26,7 @@ object CommonSettings {
       "-Yno-predef"
     ),
 
-    scalacOptions in (Compile, sbtConsole) ~= (_ filterNot (_ == "-Ywarn-unused-import")),
+    scalacOptions in (Compile, sbtConsole) ~= (_ filterNot (a => a == "-Ywarn-unused-import" || a == "-Xlint")),
     scalacOptions in (Test, sbtConsole) := (scalacOptions in (Compile, sbtConsole)).value,
 
     resolvers += Resolver.sonatypeRepo("releases"),
