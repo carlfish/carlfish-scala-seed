@@ -4,6 +4,7 @@ object CommonDeps {
   object v {
     val cats = "1.0.1"
     val catsmtl = "0.2.1"
+    val catseff = "1.0.0-RC"
     val doobie = "0.4.4"
     val circe = "0.9.1"
     val fs2 = "0.10.1"
@@ -18,6 +19,7 @@ object CommonDeps {
   val cats = Seq (
     "org.typelevel" %% "cats-core" % v.cats,
     "org.typelevel" %% "cats-mtl-core" % v.catsmtl,
+    "org.typelevel" %% "cats-effect" % v.catseff,
     "org.typelevel" %% "cats-laws" % v.cats % "test"
   )
 

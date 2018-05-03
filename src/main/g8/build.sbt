@@ -1,3 +1,5 @@
+import scalariform.formatter.preferences._
+
 lazy val root = (project in file("."))
   .settings(CommonSettings.compiler)
   .settings(CommonSettings.console)
@@ -9,5 +11,8 @@ lazy val root = (project in file("."))
   .settings(Seq(
     libraryDependencies ++=
       CommonDeps.cats ++
-      CommonDeps.scalatest
+      CommonDeps.scalatest,
+    scalariformPreferences := scalariformPreferences.value
+      .setPreference(DanglingCloseParenthesis, Force)
+      .setPreference(RewriteArrowSymbols, true)
   ))
